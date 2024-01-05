@@ -151,8 +151,6 @@
 				AC16B883266E79DA00E4989A /* MandoMidiPlaying.h */,
 				AC16B87F266E4EAC00E4989A /* MandoRound.h */,
 				AC16B884266E863E00E4989A /* MandoGameLeader.h */,
-				AC132681267E730C00ACE2C3 /* MandoCallObserver.h */,
-				AC132682267E730C00ACE2C3 /* MandoCallObserver.m */,
 				AC26310E26378A9C00889B63 /* MDXSynth.h */,
 				AC26310F26378A9C00889B63 /* MDXSynth.m */,
 				ACBF33932644DC9900708656 /* MDXPausableTimer.h */,
@@ -163,6 +161,7 @@
 				AC766ABF263A3C4500FFD188 /* MandoGame.m */,
 				AC16B880266E707300E4989A /* MandoGameRecord.h */,
 				AC16B881266E707300E4989A /* MandoGameRecord.m */,
+				ACF3DCAF2B48A8C500DE536B /* Audio */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,8 +199,6 @@
 				ACAF42E1266D93EA00B7EBF3 /* MandoPlaybackViewController.m */,
 				AC476E292651A7FD0017ECAB /* MandoSettingsTableViewController.h */,
 				AC476E2A2651A7FD0017ECAB /* MandoSettingsTableViewController.m */,
-				AC2CAE5626799F9F00DFFF43 /* MDXAudioController.h */,
-				AC2CAE5726799F9F00DFFF43 /* MDXAudioController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -227,6 +224,17 @@
 				AC2CAE4F2679819600DFFF43 /* C1.wav */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACF3DCAF2B48A8C500DE536B /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AC2CAE5626799F9F00DFFF43 /* MDXAudioController.h */,
+				AC2CAE5726799F9F00DFFF43 /* MDXAudioController.m */,
+				AC132681267E730C00ACE2C3 /* MandoCallObserver.h */,
+				AC132682267E730C00ACE2C3 /* MandoCallObserver.m */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
