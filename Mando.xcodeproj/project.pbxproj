@@ -129,64 +129,104 @@
 		AC2630E9263782A000889B63 /* Mando */ = {
 			isa = PBXGroup;
 			children = (
+				AC79DE942B489A0400F20F0C /* Model */,
+				AC79DE952B489A1D00F20F0C /* View */,
+				AC79DE962B489A2500F20F0C /* Controller */,
+				AC79DE972B489A5200F20F0C /* Store */,
+				AC79DE982B489A5C00F20F0C /* Resources */,
 				AC2630EA263782A000889B63 /* AppDelegate.h */,
 				AC2630EB263782A000889B63 /* AppDelegate.m */,
+				AC2630F6263782A100889B63 /* Assets.xcassets */,
+				AC2630FB263782A100889B63 /* Info.plist */,
+				AC2630FC263782A100889B63 /* main.m */,
+			);
+			path = Mando;
+			sourceTree = "<group>";
+		};
+		AC79DE942B489A0400F20F0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				AC476E2C2651BE810017ECAB /* MandoNotifications.h */,
 				AC1BEC86265F0F7200127D2C /* MandoConstants.h */,
-				AC2630F0263782A000889B63 /* ViewController.h */,
-				AC2630F1263782A000889B63 /* ViewController.m */,
+				AC16B883266E79DA00E4989A /* MandoMidiPlaying.h */,
+				AC16B87F266E4EAC00E4989A /* MandoRound.h */,
+				AC16B884266E863E00E4989A /* MandoGameLeader.h */,
 				AC132681267E730C00ACE2C3 /* MandoCallObserver.h */,
 				AC132682267E730C00ACE2C3 /* MandoCallObserver.m */,
-				AC79F88C266524D4009A41CE /* MandoButtonsViewController.h */,
-				AC79F88B266524D4009A41CE /* MandoButtonsViewController.m */,
-				AC476E2D2651DF3D0017ECAB /* MandoSettingsStore.h */,
-				AC476E2E2651DF3D0017ECAB /* MandoSettingsStore.m */,
-				ACBF33962644E23500708656 /* MandoPauseScrimView.h */,
-				ACBF33972644E23500708656 /* MandoPauseScrimView.m */,
-				AC263106263783F100889B63 /* MDXGlowButton.h */,
-				AC263107263783F100889B63 /* MDXGlowButton.m */,
-				ACBC684D263B93170057054F /* MDXCircleView.h */,
-				ACBC684C263B93170057054F /* MDXCircleView.m */,
-				AC2CAE5626799F9F00DFFF43 /* MDXAudioController.h */,
-				AC2CAE5726799F9F00DFFF43 /* MDXAudioController.m */,
 				AC26310E26378A9C00889B63 /* MDXSynth.h */,
 				AC26310F26378A9C00889B63 /* MDXSynth.m */,
-				AC16B883266E79DA00E4989A /* MandoMidiPlaying.h */,
-				AC022DFA2638CDAF004D4457 /* MDXGlowButton+MidiNote.h */,
-				AC022DFB2638CDAF004D4457 /* MDXGlowButton+MidiNote.m */,
 				ACBF33932644DC9900708656 /* MDXPausableTimer.h */,
 				ACBF33942644DC9900708656 /* MDXPausableTimer.m */,
-				AC3DD8472640EE16007C29A0 /* MandoToolbar.h */,
-				AC3DD8482640EE16007C29A0 /* MandoToolbar.m */,
 				AC022DF42638C62B004D4457 /* MandoGameEngine.h */,
 				AC022DF52638C62B004D4457 /* MandoGameEngine.m */,
-				AC16B87F266E4EAC00E4989A /* MandoRound.h */,
 				AC766ABE263A3C4500FFD188 /* MandoGame.h */,
 				AC766ABF263A3C4500FFD188 /* MandoGame.m */,
 				AC16B880266E707300E4989A /* MandoGameRecord.h */,
 				AC16B881266E707300E4989A /* MandoGameRecord.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC79DE952B489A1D00F20F0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACBC684D263B93170057054F /* MDXCircleView.h */,
+				ACBC684C263B93170057054F /* MDXCircleView.m */,
+				AC263106263783F100889B63 /* MDXGlowButton.h */,
+				AC263107263783F100889B63 /* MDXGlowButton.m */,
+				AC022DFA2638CDAF004D4457 /* MDXGlowButton+MidiNote.h */,
+				AC022DFB2638CDAF004D4457 /* MDXGlowButton+MidiNote.m */,
+				ACBF33962644E23500708656 /* MandoPauseScrimView.h */,
+				ACBF33972644E23500708656 /* MandoPauseScrimView.m */,
+				ACAF42DE266D939600B7EBF3 /* MandoPlaybackStoryboard.storyboard */,
+				AC476E272651A40A0017ECAB /* MandoSettingsStoryboard.storyboard */,
+				AC2630F8263782A100889B63 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC79DE962B489A2500F20F0C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC2630F0263782A000889B63 /* ViewController.h */,
+				AC2630F1263782A000889B63 /* ViewController.m */,
+				AC79F88C266524D4009A41CE /* MandoButtonsViewController.h */,
+				AC79F88B266524D4009A41CE /* MandoButtonsViewController.m */,
+				AC3DD8472640EE16007C29A0 /* MandoToolbar.h */,
+				AC3DD8482640EE16007C29A0 /* MandoToolbar.m */,
 				AC6D22542649EB56009796C8 /* MandoInfoViewViewController.h */,
 				AC6D22552649EB56009796C8 /* MandoInfoViewViewController.m */,
-				ACAF42DE266D939600B7EBF3 /* MandoPlaybackStoryboard.storyboard */,
 				ACAF42E0266D93EA00B7EBF3 /* MandoPlaybackViewController.h */,
 				ACAF42E1266D93EA00B7EBF3 /* MandoPlaybackViewController.m */,
-				AC16B884266E863E00E4989A /* MandoGameLeader.h */,
-				AC246F7E264A084300C35268 /* MandoLeaderboardStore.h */,
-				AC246F7F264A084300C35268 /* MandoLeaderboardStore.m */,
-				AC476E272651A40A0017ECAB /* MandoSettingsStoryboard.storyboard */,
 				AC476E292651A7FD0017ECAB /* MandoSettingsTableViewController.h */,
 				AC476E2A2651A7FD0017ECAB /* MandoSettingsTableViewController.m */,
-				AC2630F6263782A100889B63 /* Assets.xcassets */,
+				AC2CAE5626799F9F00DFFF43 /* MDXAudioController.h */,
+				AC2CAE5726799F9F00DFFF43 /* MDXAudioController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC79DE972B489A5200F20F0C /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				AC476E2D2651DF3D0017ECAB /* MandoSettingsStore.h */,
+				AC476E2E2651DF3D0017ECAB /* MandoSettingsStore.m */,
+				AC246F7E264A084300C35268 /* MandoLeaderboardStore.h */,
+				AC246F7F264A084300C35268 /* MandoLeaderboardStore.m */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		AC79DE982B489A5C00F20F0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				AC3B365C267C2319009D1C02 /* Error.wav */,
 				AC2CAE502679819600DFFF43 /* C.wav */,
 				AC2CAE512679819600DFFF43 /* F.wav */,
 				AC2CAE4E2679819600DFFF43 /* A.wav */,
 				AC2CAE4F2679819600DFFF43 /* C1.wav */,
-				AC2630F8263782A100889B63 /* LaunchScreen.storyboard */,
-				AC2630FB263782A100889B63 /* Info.plist */,
-				AC2630FC263782A100889B63 /* main.m */,
 			);
-			path = Mando;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
