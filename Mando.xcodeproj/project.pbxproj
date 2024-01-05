@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC022DF62638C62B004D4457 /* MandoGameEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AC022DF52638C62B004D4457 /* MandoGameEngine.m */; };
+		AC022DFC2638CDAF004D4457 /* MDXGlowButton+MidiNote.m in Sources */ = {isa = PBXBuildFile; fileRef = AC022DFB2638CDAF004D4457 /* MDXGlowButton+MidiNote.m */; };
+		AC132683267E730C00ACE2C3 /* MandoCallObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = AC132682267E730C00ACE2C3 /* MandoCallObserver.m */; };
+		AC16B882266E707300E4989A /* MandoGameRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = AC16B881266E707300E4989A /* MandoGameRecord.m */; };
+		AC246F80264A084300C35268 /* MandoLeaderboardStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AC246F7F264A084300C35268 /* MandoLeaderboardStore.m */; };
+		AC2630EC263782A000889B63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2630EB263782A000889B63 /* AppDelegate.m */; };
+		AC2630F2263782A000889B63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2630F1263782A000889B63 /* ViewController.m */; };
+		AC2630F7263782A100889B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2630F6263782A100889B63 /* Assets.xcassets */; };
+		AC2630FA263782A100889B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2630F8263782A100889B63 /* LaunchScreen.storyboard */; };
+		AC2630FD263782A100889B63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2630FC263782A100889B63 /* main.m */; };
+		AC263108263783F100889B63 /* MDXGlowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AC263107263783F100889B63 /* MDXGlowButton.m */; };
+		AC26311426378A9D00889B63 /* MDXSynth.m in Sources */ = {isa = PBXBuildFile; fileRef = AC26310F26378A9C00889B63 /* MDXSynth.m */; };
+		AC2CAE522679819600DFFF43 /* A.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2CAE4E2679819600DFFF43 /* A.wav */; };
+		AC2CAE532679819600DFFF43 /* C1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2CAE4F2679819600DFFF43 /* C1.wav */; };
+		AC2CAE542679819600DFFF43 /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2CAE502679819600DFFF43 /* C.wav */; };
+		AC2CAE552679819600DFFF43 /* F.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2CAE512679819600DFFF43 /* F.wav */; };
+		AC2CAE5826799F9F00DFFF43 /* MDXAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2CAE5726799F9F00DFFF43 /* MDXAudioController.m */; };
+		AC3B365D267C2319009D1C02 /* Error.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC3B365C267C2319009D1C02 /* Error.wav */; };
+		AC3DD8492640EE16007C29A0 /* MandoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3DD8482640EE16007C29A0 /* MandoToolbar.m */; };
+		AC476E282651A40A0017ECAB /* MandoSettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC476E272651A40A0017ECAB /* MandoSettingsStoryboard.storyboard */; };
+		AC476E2B2651A7FD0017ECAB /* MandoSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC476E2A2651A7FD0017ECAB /* MandoSettingsTableViewController.m */; };
+		AC476E2F2651DF3D0017ECAB /* MandoSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AC476E2E2651DF3D0017ECAB /* MandoSettingsStore.m */; };
+		AC6D22562649EB56009796C8 /* MandoInfoViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D22552649EB56009796C8 /* MandoInfoViewViewController.m */; };
+		AC766AC0263A3C4500FFD188 /* MandoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AC766ABF263A3C4500FFD188 /* MandoGame.m */; };
+		AC79F88D266524D4009A41CE /* MandoButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC79F88B266524D4009A41CE /* MandoButtonsViewController.m */; };
+		ACAF42DF266D939600B7EBF3 /* MandoPlaybackStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAF42DE266D939600B7EBF3 /* MandoPlaybackStoryboard.storyboard */; };
+		ACAF42E2266D93EA00B7EBF3 /* MandoPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACAF42E1266D93EA00B7EBF3 /* MandoPlaybackViewController.m */; };
+		ACBC684E263B93170057054F /* MDXCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBC684C263B93170057054F /* MDXCircleView.m */; };
+		ACBF33952644DC9900708656 /* MDXPausableTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF33942644DC9900708656 /* MDXPausableTimer.m */; };
+		ACBF33982644E23500708656 /* MandoPauseScrimView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF33972644E23500708656 /* MandoPauseScrimView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AC022DF42638C62B004D4457 /* MandoGameEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoGameEngine.h; sourceTree = "<group>"; };
+		AC022DF52638C62B004D4457 /* MandoGameEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoGameEngine.m; sourceTree = "<group>"; };
+		AC022DFA2638CDAF004D4457 /* MDXGlowButton+MidiNote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDXGlowButton+MidiNote.h"; sourceTree = "<group>"; };
+		AC022DFB2638CDAF004D4457 /* MDXGlowButton+MidiNote.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MDXGlowButton+MidiNote.m"; sourceTree = "<group>"; };
+		AC132681267E730C00ACE2C3 /* MandoCallObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoCallObserver.h; sourceTree = "<group>"; };
+		AC132682267E730C00ACE2C3 /* MandoCallObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoCallObserver.m; sourceTree = "<group>"; };
+		AC16B87F266E4EAC00E4989A /* MandoRound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoRound.h; sourceTree = "<group>"; };
+		AC16B880266E707300E4989A /* MandoGameRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoGameRecord.h; sourceTree = "<group>"; };
+		AC16B881266E707300E4989A /* MandoGameRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoGameRecord.m; sourceTree = "<group>"; };
+		AC16B883266E79DA00E4989A /* MandoMidiPlaying.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoMidiPlaying.h; sourceTree = "<group>"; };
+		AC16B884266E863E00E4989A /* MandoGameLeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoGameLeader.h; sourceTree = "<group>"; };
+		AC1BEC86265F0F7200127D2C /* MandoConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoConstants.h; sourceTree = "<group>"; };
+		AC246F7E264A084300C35268 /* MandoLeaderboardStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoLeaderboardStore.h; sourceTree = "<group>"; };
+		AC246F7F264A084300C35268 /* MandoLeaderboardStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoLeaderboardStore.m; sourceTree = "<group>"; };
+		AC2630E7263782A000889B63 /* Mando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mando.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2630EA263782A000889B63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC2630EB263782A000889B63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC2630F0263782A000889B63 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC2630F1263782A000889B63 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC2630F6263782A100889B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC2630F9263782A100889B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC2630FB263782A100889B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2630FC263782A100889B63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC263106263783F100889B63 /* MDXGlowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDXGlowButton.h; sourceTree = "<group>"; };
+		AC263107263783F100889B63 /* MDXGlowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDXGlowButton.m; sourceTree = "<group>"; };
+		AC26310E26378A9C00889B63 /* MDXSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDXSynth.h; sourceTree = "<group>"; };
+		AC26310F26378A9C00889B63 /* MDXSynth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDXSynth.m; sourceTree = "<group>"; };
+		AC2CAE4E2679819600DFFF43 /* A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = A.wav; sourceTree = "<group>"; };
+		AC2CAE4F2679819600DFFF43 /* C1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C1.wav; sourceTree = "<group>"; };
+		AC2CAE502679819600DFFF43 /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C.wav; sourceTree = "<group>"; };
+		AC2CAE512679819600DFFF43 /* F.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = F.wav; sourceTree = "<group>"; };
+		AC2CAE5626799F9F00DFFF43 /* MDXAudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDXAudioController.h; sourceTree = "<group>"; };
+		AC2CAE5726799F9F00DFFF43 /* MDXAudioController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDXAudioController.m; sourceTree = "<group>"; };
+		AC3B365C267C2319009D1C02 /* Error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Error.wav; sourceTree = "<group>"; };
+		AC3DD8472640EE16007C29A0 /* MandoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoToolbar.h; sourceTree = "<group>"; };
+		AC3DD8482640EE16007C29A0 /* MandoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoToolbar.m; sourceTree = "<group>"; };
+		AC476E272651A40A0017ECAB /* MandoSettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MandoSettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		AC476E292651A7FD0017ECAB /* MandoSettingsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoSettingsTableViewController.h; sourceTree = "<group>"; };
+		AC476E2A2651A7FD0017ECAB /* MandoSettingsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoSettingsTableViewController.m; sourceTree = "<group>"; };
+		AC476E2C2651BE810017ECAB /* MandoNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoNotifications.h; sourceTree = "<group>"; };
+		AC476E2D2651DF3D0017ECAB /* MandoSettingsStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoSettingsStore.h; sourceTree = "<group>"; };
+		AC476E2E2651DF3D0017ECAB /* MandoSettingsStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoSettingsStore.m; sourceTree = "<group>"; };
+		AC6D22542649EB56009796C8 /* MandoInfoViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoInfoViewViewController.h; sourceTree = "<group>"; };
+		AC6D22552649EB56009796C8 /* MandoInfoViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoInfoViewViewController.m; sourceTree = "<group>"; };
+		AC766ABE263A3C4500FFD188 /* MandoGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoGame.h; sourceTree = "<group>"; };
+		AC766ABF263A3C4500FFD188 /* MandoGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoGame.m; sourceTree = "<group>"; };
+		AC79F88B266524D4009A41CE /* MandoButtonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MandoButtonsViewController.m; sourceTree = "<group>"; };
+		AC79F88C266524D4009A41CE /* MandoButtonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MandoButtonsViewController.h; sourceTree = "<group>"; };
+		ACAF42DE266D939600B7EBF3 /* MandoPlaybackStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MandoPlaybackStoryboard.storyboard; sourceTree = "<group>"; };
+		ACAF42E0266D93EA00B7EBF3 /* MandoPlaybackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoPlaybackViewController.h; sourceTree = "<group>"; };
+		ACAF42E1266D93EA00B7EBF3 /* MandoPlaybackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoPlaybackViewController.m; sourceTree = "<group>"; };
+		ACBC684C263B93170057054F /* MDXCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDXCircleView.m; sourceTree = "<group>"; };
+		ACBC684D263B93170057054F /* MDXCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDXCircleView.h; sourceTree = "<group>"; };
+		ACBF33932644DC9900708656 /* MDXPausableTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDXPausableTimer.h; sourceTree = "<group>"; };
+		ACBF33942644DC9900708656 /* MDXPausableTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDXPausableTimer.m; sourceTree = "<group>"; };
+		ACBF33962644E23500708656 /* MandoPauseScrimView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoPauseScrimView.h; sourceTree = "<group>"; };
+		ACBF33972644E23500708656 /* MandoPauseScrimView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoPauseScrimView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC2630E4263782A000889B63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC2630DE263782A000889B63 = {
+			isa = PBXGroup;
+			children = (
+				AC2630E9263782A000889B63 /* Mando */,
+				AC2630E8263782A000889B63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC2630E8263782A000889B63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC2630E7263782A000889B63 /* Mando.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC2630E9263782A000889B63 /* Mando */ = {
+			isa = PBXGroup;
+			children = (
+				AC2630EA263782A000889B63 /* AppDelegate.h */,
+				AC2630EB263782A000889B63 /* AppDelegate.m */,
+				AC476E2C2651BE810017ECAB /* MandoNotifications.h */,
+				AC1BEC86265F0F7200127D2C /* MandoConstants.h */,
+				AC2630F0263782A000889B63 /* ViewController.h */,
+				AC2630F1263782A000889B63 /* ViewController.m */,
+				AC132681267E730C00ACE2C3 /* MandoCallObserver.h */,
+				AC132682267E730C00ACE2C3 /* MandoCallObserver.m */,
+				AC79F88C266524D4009A41CE /* MandoButtonsViewController.h */,
+				AC79F88B266524D4009A41CE /* MandoButtonsViewController.m */,
+				AC476E2D2651DF3D0017ECAB /* MandoSettingsStore.h */,
+				AC476E2E2651DF3D0017ECAB /* MandoSettingsStore.m */,
+				ACBF33962644E23500708656 /* MandoPauseScrimView.h */,
+				ACBF33972644E23500708656 /* MandoPauseScrimView.m */,
+				AC263106263783F100889B63 /* MDXGlowButton.h */,
+				AC263107263783F100889B63 /* MDXGlowButton.m */,
+				ACBC684D263B93170057054F /* MDXCircleView.h */,
+				ACBC684C263B93170057054F /* MDXCircleView.m */,
+				AC2CAE5626799F9F00DFFF43 /* MDXAudioController.h */,
+				AC2CAE5726799F9F00DFFF43 /* MDXAudioController.m */,
+				AC26310E26378A9C00889B63 /* MDXSynth.h */,
+				AC26310F26378A9C00889B63 /* MDXSynth.m */,
+				AC16B883266E79DA00E4989A /* MandoMidiPlaying.h */,
+				AC022DFA2638CDAF004D4457 /* MDXGlowButton+MidiNote.h */,
+				AC022DFB2638CDAF004D4457 /* MDXGlowButton+MidiNote.m */,
+				ACBF33932644DC9900708656 /* MDXPausableTimer.h */,
+				ACBF33942644DC9900708656 /* MDXPausableTimer.m */,
+				AC3DD8472640EE16007C29A0 /* MandoToolbar.h */,
+				AC3DD8482640EE16007C29A0 /* MandoToolbar.m */,
+				AC022DF42638C62B004D4457 /* MandoGameEngine.h */,
+				AC022DF52638C62B004D4457 /* MandoGameEngine.m */,
+				AC16B87F266E4EAC00E4989A /* MandoRound.h */,
+				AC766ABE263A3C4500FFD188 /* MandoGame.h */,
+				AC766ABF263A3C4500FFD188 /* MandoGame.m */,
+				AC16B880266E707300E4989A /* MandoGameRecord.h */,
+				AC16B881266E707300E4989A /* MandoGameRecord.m */,
+				AC6D22542649EB56009796C8 /* MandoInfoViewViewController.h */,
+				AC6D22552649EB56009796C8 /* MandoInfoViewViewController.m */,
+				ACAF42DE266D939600B7EBF3 /* MandoPlaybackStoryboard.storyboard */,
+				ACAF42E0266D93EA00B7EBF3 /* MandoPlaybackViewController.h */,
+				ACAF42E1266D93EA00B7EBF3 /* MandoPlaybackViewController.m */,
+				AC16B884266E863E00E4989A /* MandoGameLeader.h */,
+				AC246F7E264A084300C35268 /* MandoLeaderboardStore.h */,
+				AC246F7F264A084300C35268 /* MandoLeaderboardStore.m */,
+				AC476E272651A40A0017ECAB /* MandoSettingsStoryboard.storyboard */,
+				AC476E292651A7FD0017ECAB /* MandoSettingsTableViewController.h */,
+				AC476E2A2651A7FD0017ECAB /* MandoSettingsTableViewController.m */,
+				AC2630F6263782A100889B63 /* Assets.xcassets */,
+				AC3B365C267C2319009D1C02 /* Error.wav */,
+				AC2CAE502679819600DFFF43 /* C.wav */,
+				AC2CAE512679819600DFFF43 /* F.wav */,
+				AC2CAE4E2679819600DFFF43 /* A.wav */,
+				AC2CAE4F2679819600DFFF43 /* C1.wav */,
+				AC2630F8263782A100889B63 /* LaunchScreen.storyboard */,
+				AC2630FB263782A100889B63 /* Info.plist */,
+				AC2630FC263782A100889B63 /* main.m */,
+			);
+			path = Mando;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC2630E6263782A000889B63 /* Mando */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC263100263782A100889B63 /* Build configuration list for PBXNativeTarget "Mando" */;
+			buildPhases = (
+				AC2630E3263782A000889B63 /* Sources */,
+				AC2630E4263782A000889B63 /* Frameworks */,
+				AC2630E5263782A000889B63 /* Resources */,
+				9C7061D0264084F70035B377 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mando;
+			productName = Mando;
+			productReference = AC2630E7263782A000889B63 /* Mando.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC2630DF263782A000889B63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					AC2630E6263782A000889B63 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = AC2630E2263782A000889B63 /* Build configuration list for PBXProject "Mando" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC2630DE263782A000889B63;
+			productRefGroup = AC2630E8263782A000889B63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC2630E6263782A000889B63 /* Mando */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC2630E5263782A000889B63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACAF42DF266D939600B7EBF3 /* MandoPlaybackStoryboard.storyboard in Resources */,
+				AC476E282651A40A0017ECAB /* MandoSettingsStoryboard.storyboard in Resources */,
+				AC2CAE532679819600DFFF43 /* C1.wav in Resources */,
+				AC3B365D267C2319009D1C02 /* Error.wav in Resources */,
+				AC2630FA263782A100889B63 /* LaunchScreen.storyboard in Resources */,
+				AC2CAE522679819600DFFF43 /* A.wav in Resources */,
+				AC2630F7263782A100889B63 /* Assets.xcassets in Resources */,
+				AC2CAE542679819600DFFF43 /* C.wav in Resources */,
+				AC2CAE552679819600DFFF43 /* F.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C7061D0264084F70035B377 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Timestamp for build number.\nbuildNumber=`/bin/date -u +\"%y.%m%d.%H%M\"`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC2630E3263782A000889B63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC26311426378A9D00889B63 /* MDXSynth.m in Sources */,
+				AC476E2F2651DF3D0017ECAB /* MandoSettingsStore.m in Sources */,
+				AC263108263783F100889B63 /* MDXGlowButton.m in Sources */,
+				AC476E2B2651A7FD0017ECAB /* MandoSettingsTableViewController.m in Sources */,
+				AC16B882266E707300E4989A /* MandoGameRecord.m in Sources */,
+				AC246F80264A084300C35268 /* MandoLeaderboardStore.m in Sources */,
+				AC2CAE5826799F9F00DFFF43 /* MDXAudioController.m in Sources */,
+				AC022DF62638C62B004D4457 /* MandoGameEngine.m in Sources */,
+				AC79F88D266524D4009A41CE /* MandoButtonsViewController.m in Sources */,
+				AC132683267E730C00ACE2C3 /* MandoCallObserver.m in Sources */,
+				ACBF33982644E23500708656 /* MandoPauseScrimView.m in Sources */,
+				ACAF42E2266D93EA00B7EBF3 /* MandoPlaybackViewController.m in Sources */,
+				AC2630F2263782A000889B63 /* ViewController.m in Sources */,
+				AC2630EC263782A000889B63 /* AppDelegate.m in Sources */,
+				AC3DD8492640EE16007C29A0 /* MandoToolbar.m in Sources */,
+				AC022DFC2638CDAF004D4457 /* MDXGlowButton+MidiNote.m in Sources */,
+				AC6D22562649EB56009796C8 /* MandoInfoViewViewController.m in Sources */,
+				AC2630FD263782A100889B63 /* main.m in Sources */,
+				ACBF33952644DC9900708656 /* MDXPausableTimer.m in Sources */,
+				AC766AC0263A3C4500FFD188 /* MandoGame.m in Sources */,
+				ACBC684E263B93170057054F /* MDXCircleView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC2630F8263782A100889B63 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2630F9263782A100889B63 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC2630FE263782A100889B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC2630FF263782A100889B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC263101263782A100889B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2KR5TEJPW;
+				INFOPLIST_FILE = Mando/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariodiana.Mando;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC263102263782A100889B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2KR5TEJPW;
+				INFOPLIST_FILE = Mando/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariodiana.Mando;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC2630E2263782A000889B63 /* Build configuration list for PBXProject "Mando" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2630FE263782A100889B63 /* Debug */,
+				AC2630FF263782A100889B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC263100263782A100889B63 /* Build configuration list for PBXNativeTarget "Mando" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC263101263782A100889B63 /* Debug */,
+				AC263102263782A100889B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC2630DF263782A000889B63 /* Project object */;
+}

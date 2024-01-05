@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Playback-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MandoPlaybackID" title="Playback" wantsFullScreenLayout="YES" id="Y6W-OH-hqX" customClass="MandoPlaybackViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymR-oS-5SP">
+                                <rect key="frame" x="20" y="68" width="374" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LIO-b0-gvz">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="725"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="umi-QJ-gSM">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="362.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCG-FB-n4F" customClass="MDXGlowButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="362.5"/>
+                                                        <color key="backgroundColor" red="0.086274509803921567" green="0.43137254901960786" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-UU-1df" customClass="MDXGlowButton">
+                                                        <rect key="frame" x="187" y="0.0" width="187" height="362.5"/>
+                                                        <color key="backgroundColor" red="0.59999999999999998" green="0.0078431372549019607" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-fG-xM5">
+                                                <rect key="frame" x="0.0" y="362.5" width="374" height="362.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ae4-BY-iih" customClass="MDXGlowButton">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="362.5"/>
+                                                        <color key="backgroundColor" red="0.69019607843137254" green="0.36078431372549019" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bK-4N-0e1" customClass="MDXGlowButton">
+                                                        <rect key="frame" x="187" y="0.0" width="187" height="362.5"/>
+                                                        <color key="backgroundColor" red="0.19215686274509802" green="0.0039215686274509803" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="hBZ-pA-r8x"/>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.43137254901960786" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LIO-b0-gvz" firstAttribute="leading" secondItem="hBZ-pA-r8x" secondAttribute="leading" id="JrT-Jf-Ucs"/>
+                                    <constraint firstItem="hBZ-pA-r8x" firstAttribute="bottom" secondItem="LIO-b0-gvz" secondAttribute="bottom" id="QAd-N6-2Vc"/>
+                                    <constraint firstItem="LIO-b0-gvz" firstAttribute="top" secondItem="hBZ-pA-r8x" secondAttribute="top" id="mmo-7C-Ah6"/>
+                                    <constraint firstItem="hBZ-pA-r8x" firstAttribute="trailing" secondItem="LIO-b0-gvz" secondAttribute="trailing" id="zQa-8V-U23"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ymR-oS-5SP" secondAttribute="trailing" constant="20" id="JOV-QM-VJe"/>
+                            <constraint firstItem="ymR-oS-5SP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="ShH-PJ-WRH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ymR-oS-5SP" secondAttribute="bottom" constant="20" id="WM4-Sc-Sue"/>
+                            <constraint firstItem="ymR-oS-5SP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ucr-8m-dbe"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="blueButton" destination="2bK-4N-0e1" id="yR3-8C-92j"/>
+                        <outlet property="greenButton" destination="tCG-FB-n4F" id="WSO-JU-vSN"/>
+                        <outlet property="orangeButton" destination="Ae4-BY-iih" id="Nji-N1-ZCm"/>
+                        <outlet property="redButton" destination="R5z-UU-1df" id="qup-r8-jP7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="33.482142857142854"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="2bK-4N-0e1">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="Ae4-BY-iih">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="R5z-UU-1df">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="tCG-FB-n4F">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

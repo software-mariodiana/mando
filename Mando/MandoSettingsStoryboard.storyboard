@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ELL-mT-aQf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="N78-ej-gZr">
+            <objects>
+                <tableViewController id="Uuj-OW-VYI" customClass="MandoSettingsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7Oi-ci-CE0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Play rate" id="x9L-pw-aum">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.5" id="fFm-x2-DB8">
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fFm-x2-DB8" id="aW7-O9-ehi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="8" continuous="NO" minimumValueImage="tortoise" catalog="system" maximumValueImage="hare" translatesAutoresizingMaskIntoConstraints="NO" id="CfY-sQ-ypC">
+                                                    <rect key="frame" x="18" y="7" width="378" height="31"/>
+                                                    <connections>
+                                                        <action selector="updatePlayRate:" destination="Uuj-OW-VYI" eventType="valueChanged" id="VX7-4Y-eXz"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CfY-sQ-ypC" firstAttribute="centerY" secondItem="aW7-O9-ehi" secondAttribute="centerY" id="65K-MF-yVQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="CfY-sQ-ypC" secondAttribute="trailing" constant="20" symbolic="YES" id="dLy-RW-L2w"/>
+                                                <constraint firstItem="CfY-sQ-ypC" firstAttribute="leading" secondItem="aW7-O9-ehi" secondAttribute="leading" constant="20" symbolic="YES" id="mDI-ob-jU1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Notes per round" id="fEl-Jm-oL2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43.5" id="pqt-HX-s3g">
+                                        <rect key="frame" x="0.0" y="143" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pqt-HX-s3g" id="VTU-Vo-pf8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YDk-3p-tYx">
+                                                    <rect key="frame" x="20" y="6.5" width="374" height="32"/>
+                                                    <segments>
+                                                        <segment title="One"/>
+                                                        <segment title="Two"/>
+                                                        <segment title="Three"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="updateNotesPerRound:" destination="Uuj-OW-VYI" eventType="valueChanged" id="12d-5H-DFo"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YDk-3p-tYx" secondAttribute="trailing" constant="20" symbolic="YES" id="Dbl-jn-LZ8"/>
+                                                <constraint firstItem="YDk-3p-tYx" firstAttribute="leading" secondItem="VTU-Vo-pf8" secondAttribute="leading" constant="20" symbolic="YES" id="Syx-lM-AKO"/>
+                                                <constraint firstItem="YDk-3p-tYx" firstAttribute="centerY" secondItem="VTU-Vo-pf8" secondAttribute="centerY" id="j9w-nk-oVX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Uuj-OW-VYI" id="pAp-B0-iGS"/>
+                            <outlet property="delegate" destination="Uuj-OW-VYI" id="DUb-9F-CUI"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Settings" id="Yis-Mj-xXG"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="notesPerRoundControl" destination="YDk-3p-tYx" id="DmH-c6-wIc"/>
+                        <outlet property="playRateSlider" destination="CfY-sQ-ypC" id="0hE-Bp-ECr"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNG-4b-Eoa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508.69565217391306" y="-213.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0bC-GZ-52c">
+            <objects>
+                <navigationController storyboardIdentifier="MandoSettingsID" toolbarHidden="NO" id="ELL-mT-aQf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fde-GD-GWo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VL7-7Q-R5t">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Uuj-OW-VYI" kind="relationship" relationship="rootViewController" id="dLO-IT-MS3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suO-GZ-c3g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1398" y="-213"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hare" catalog="system" width="128" height="92"/>
+        <image name="tortoise" catalog="system" width="128" height="68"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
