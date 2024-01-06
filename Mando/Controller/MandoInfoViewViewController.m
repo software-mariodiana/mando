@@ -28,7 +28,14 @@ NSString* const MandoInfoViewTableCellIdentifier = @"MandoInfoViewTableCellIdent
     [[self navigationController] setToolbarHidden:NO];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UITableView* tableView = [[UITableView alloc] init];//WithFrame:CGRectZero style:UITableViewStyleInsetGrouped];
+    UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" 
+                                                                   style:UIBarButtonItemStyleDone
+                                                                  target:self
+                                                                  action:@selector(dismiss:)];
+    
+    self.navigationItem.rightBarButtonItem = doneButton;
+    
+    UITableView* tableView = [[UITableView alloc] init];
     
     tableView.dataSource = self;
     tableView.delegate = self;
@@ -59,6 +66,11 @@ NSString* const MandoInfoViewTableCellIdentifier = @"MandoInfoViewTableCellIdent
 - (void)viewWillDisappear:(BOOL)animated
 {
     [[MandoLeaderboardStore sharedStore] prune];
+}
+
+- (void)dismiss:(id)sender
+{
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (id<MandoGameLeader>)lastGamePlayed
