@@ -19,6 +19,8 @@ float playRates[] = { 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5, 0.45, 0.4 };
 @interface MandoSettingsTableViewController ()
 @property (nonatomic, weak) IBOutlet UISlider* playRateSlider;
 @property (nonatomic, weak) IBOutlet UISegmentedControl* notesPerRoundControl;
+@property (nonatomic, weak) IBOutlet UISwitch* speedUpSwitch;
+@property (nonatomic, weak) IBOutlet UILabel* speedUpSwitchLabel;
 @property (nonatomic, weak) UILabel* toolbarLabel;
 @end
 
@@ -38,6 +40,10 @@ float playRates[] = { 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5, 0.45, 0.4 };
     NSInteger index = notesPerRound - 1;
     self.notesPerRoundControl.selectedSegmentIndex = index;
     [self updateNotesPerRound:[self notesPerRoundControl]];
+    
+    BOOL isSpeedingUp = [[MandoSettingsStore sharedStore] isAcceleratingEachRound];
+    [[self speedUpSwitch] setOn:isSpeedingUp];
+    self.speedUpSwitchLabel.text = [[self speedUpSwitch] isOn] ? @"YES" : @"NO";
 }
 
 
@@ -122,6 +128,14 @@ float playRates[] = { 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5, 0.45, 0.4 };
     }
     
     return (float)index;
+}
+
+
+- (IBAction)updateSpeedUpEachRound:(id)sender 
+{
+    BOOL isOn = [sender isOn];
+    [[MandoSettingsStore sharedStore] setAccelerateEachRound:isOn];
+    self.speedUpSwitchLabel.text = isOn ? @"YES" : @"NO";
 }
 
 @end
