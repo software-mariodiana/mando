@@ -87,6 +87,20 @@
             <point key="canvasLocation" x="-26.086956521739133" y="33.482142857142854"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="2bK-4N-0e1">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="Ae4-BY-iih">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="R5z-UU-1df">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="tCG-FB-n4F">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
