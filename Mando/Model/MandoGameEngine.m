@@ -12,6 +12,9 @@
 #import "MandoNotifications.h"
 #import "MandoSettingsStore.h"
 
+#define SPEED_INCREASE 0.025
+#define MIN_INTERVAL 0.25
+
 #define PauseForInterval() [NSThread sleepForTimeInterval:[self playRateInterval]]
 
 @interface MandoErrorTone : NSObject
@@ -29,6 +32,7 @@
 
 
 @interface MandoGameEngine ()
+@property (nonatomic, assign, getter=isAcceleratingEachRound) BOOL accelerateEachRound;
 @property (nonatomic, assign) NSTimeInterval playRateInterval;
 @property (nonatomic, assign) NSInteger notesPerRound;
 @property (nonatomic, strong) MDXPausableTimer* timer;
@@ -57,6 +61,7 @@
     self = [super init];
     
     if (self) {
+        _accelerateEachRound = YES; //TODO: This should come from settings.
         _playRateInterval = [[MandoSettingsStore sharedStore] playRate];
         _notesPerRound = [[MandoSettingsStore sharedStore] notesPerRound];
         _tones = tones;
@@ -77,14 +82,35 @@
     MandoSettingsStore* settings = [notification object];
     
     // The simplest thing to do is update everything.
+    self.accelerateEachRound = YES;//TODO: Not implemented.
     self.playRateInterval = [settings playRate];
     self.notesPerRound = [settings notesPerRound];
+}
+
+
+- (void)resetPlayRateInterval
+{
+    self.playRateInterval = [[MandoSettingsStore sharedStore] playRate];
+    
+    if ([self isAcceleratingEachRound]) {
+        // Round 2 will then be at the user's desired starting speed.
+        self.playRateInterval = self.playRateInterval + SPEED_INCREASE;
+    }
+}
+
+
+- (void)updatePlayRateInterval
+{
+    if ([self isAcceleratingEachRound] && [self playRateInterval] > MIN_INTERVAL) {
+        self.playRateInterval = self.playRateInterval - SPEED_INCREASE;
+    }
 }
 
 
 - (void)startNewGame
 {
     self.userTerminatedGame = NO;
+    [self resetPlayRateInterval];
     [self playRound];
 }
 
@@ -148,6 +174,8 @@
             });
         }
     });
+    
+    [self updatePlayRateInterval];
 }
 
 
