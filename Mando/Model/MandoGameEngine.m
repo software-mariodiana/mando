@@ -12,7 +12,7 @@
 #import "MandoNotifications.h"
 #import "MandoSettingsStore.h"
 
-#define SPEED_INCREASE 0.025
+#define SPEED_INCREASE 0.0175
 #define MIN_INTERVAL 0.25
 
 #define PauseForInterval() [NSThread sleepForTimeInterval:[self playRateInterval]]
@@ -61,7 +61,7 @@
     self = [super init];
     
     if (self) {
-        _accelerateEachRound = YES; //TODO: This should come from settings.
+        _accelerateEachRound = [[MandoSettingsStore sharedStore] isAcceleratingEachRound];
         _playRateInterval = [[MandoSettingsStore sharedStore] playRate];
         _notesPerRound = [[MandoSettingsStore sharedStore] notesPerRound];
         _tones = tones;
@@ -82,7 +82,7 @@
     MandoSettingsStore* settings = [notification object];
     
     // The simplest thing to do is update everything.
-    self.accelerateEachRound = YES;//TODO: Not implemented.
+    self.accelerateEachRound = [settings isAcceleratingEachRound];
     self.playRateInterval = [settings playRate];
     self.notesPerRound = [settings notesPerRound];
 }
@@ -104,6 +104,8 @@
     if ([self isAcceleratingEachRound] && [self playRateInterval] > MIN_INTERVAL) {
         self.playRateInterval = self.playRateInterval - SPEED_INCREASE;
     }
+    
+    NSLog(@"## Play rate interval: %.2f", [self playRateInterval]);
 }
 
 

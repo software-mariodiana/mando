@@ -9,6 +9,7 @@
 
 @interface MandoSettingsStore : NSObject
 
+@property (nonatomic, assign, getter=isAcceleratingEachRound) BOOL accelerateEachRound;
 @property (nonatomic, assign) NSTimeInterval playRate;
 @property (nonatomic, assign) NSInteger notesPerRound;
 

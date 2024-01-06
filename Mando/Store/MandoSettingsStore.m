@@ -9,6 +9,7 @@
 #import "MandoNotifications.h"
 
 NSString* const MandoUserSettingsKey = @"MandoUserSettingsKey";
+NSString* const MandoAccelerateEachRoundKey = @"AccelerateEachRound";
 NSString* const MandoPlayRateKey = @"PlayRate";
 NSString* const MandoNotesPerRoundKey = @"NotesPerRound";
 
@@ -51,6 +52,7 @@ NSString* const MandoNotesPerRoundKey = @"NotesPerRound";
         // We should only need to do this once, since we'll persist defaults immediately.
         NSLog(@"## Intializing user settings dictionary...");
         NSDictionary* config = @{
+            MandoAccelerateEachRoundKey: [NSNumber numberWithBool:YES],
             MandoPlayRateKey: [NSNumber numberWithFloat:0.6],
             MandoNotesPerRoundKey: [NSNumber numberWithInteger:1]
         };
@@ -61,6 +63,19 @@ NSString* const MandoNotesPerRoundKey = @"NotesPerRound";
     }
     
     return userSettings;
+}
+
+
+- (BOOL)isAcceleratingEachRound
+{
+    return [[[self settings] objectForKey:MandoAccelerateEachRoundKey] boolValue];
+}
+
+
+- (void)setAccelerateEachRound:(BOOL)accelerateEachRound
+{
+    id value = [NSNumber numberWithBool:accelerateEachRound];
+    [self updateSettingsWithObject:value forKey:MandoAccelerateEachRoundKey];
 }
 
 
