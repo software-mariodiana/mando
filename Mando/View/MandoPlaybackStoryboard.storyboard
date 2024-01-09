@@ -18,34 +18,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymR-oS-5SP">
-                                <rect key="frame" x="20" y="68" width="374" height="725"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LIO-b0-gvz">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="725"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="765"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="umi-QJ-gSM">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="362.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="382.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCG-FB-n4F" customClass="MDXGlowButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="362.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="382.5"/>
                                                         <color key="backgroundColor" red="0.086274509803921567" green="0.43137254901960786" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-UU-1df" customClass="MDXGlowButton">
-                                                        <rect key="frame" x="187" y="0.0" width="187" height="362.5"/>
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="382.5"/>
                                                         <color key="backgroundColor" red="0.59999999999999998" green="0.0078431372549019607" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-fG-xM5">
-                                                <rect key="frame" x="0.0" y="362.5" width="374" height="362.5"/>
+                                                <rect key="frame" x="0.0" y="382.5" width="414" height="382.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ae4-BY-iih" customClass="MDXGlowButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="362.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="382.5"/>
                                                         <color key="backgroundColor" red="0.69019607843137254" green="0.36078431372549019" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bK-4N-0e1" customClass="MDXGlowButton">
-                                                        <rect key="frame" x="187" y="0.0" width="187" height="362.5"/>
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="382.5"/>
                                                         <color key="backgroundColor" red="0.19215686274509802" green="0.0039215686274509803" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                 </subviews>
@@ -67,10 +67,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ymR-oS-5SP" secondAttribute="trailing" constant="20" id="JOV-QM-VJe"/>
-                            <constraint firstItem="ymR-oS-5SP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="ShH-PJ-WRH"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ymR-oS-5SP" secondAttribute="bottom" constant="20" id="WM4-Sc-Sue"/>
-                            <constraint firstItem="ymR-oS-5SP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ucr-8m-dbe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ymR-oS-5SP" secondAttribute="trailing" id="JOV-QM-VJe"/>
+                            <constraint firstItem="ymR-oS-5SP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ShH-PJ-WRH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ymR-oS-5SP" secondAttribute="bottom" id="WM4-Sc-Sue"/>
+                            <constraint firstItem="ymR-oS-5SP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ucr-8m-dbe"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>

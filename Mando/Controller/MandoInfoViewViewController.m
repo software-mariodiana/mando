@@ -25,8 +25,13 @@ NSString* const MandoInfoViewTableCellIdentifier = @"MandoInfoViewTableCellIdent
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Leaderboard";
-    [[self navigationController] setToolbarHidden:NO];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIColor* background = UIColor.whiteColor;
+    
+    UINavigationController* nc = [self navigationController];
+    nc.toolbarHidden = NO;
+    nc.navigationBar.backgroundColor = background;
+    nc.toolbar.backgroundColor = background;
     
     UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" 
                                                                    style:UIBarButtonItemStyleDone

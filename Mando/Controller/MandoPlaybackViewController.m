@@ -34,6 +34,9 @@
     
     self.navigationItem.backButtonTitle = @"Leaders";
     
+    // The space below the toolbar has no color if not set manually.
+    self.navigationController.view.backgroundColor = self.navigationController.toolbar.backgroundColor;
+    
     UIBarButtonItem* spacer =
         [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                       target:nil
