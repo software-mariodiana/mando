@@ -111,6 +111,8 @@ NSString* const MandoInfoViewTableCellIdentifier = @"MandoInfoViewTableCellIdent
                                       reuseIdentifier:MandoInfoViewTableCellIdentifier];
     }
     
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
     id<MandoGameLeader> leader = nil;
     
     if ([self numberOfSectionsInTableView:tableView] > 1 && [indexPath section] == 0) {
