@@ -43,7 +43,7 @@
                                                       action:nil];
     
     UIBarButtonItem* resumeButton =
-        [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"play.fill"]
+        [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"play.rectangle"]
                                          style:UIBarButtonItemStylePlain
                                         target:self
                                         action:@selector(play:)];

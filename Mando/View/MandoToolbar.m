@@ -7,6 +7,10 @@
 
 #import "MandoToolbar.h"
 
+NSString* const MandoGameStateDidUpdateToIdleNotification = @"MandoGameStateDidUpdateToIdle";
+NSString* const MandoGameStateDidUpdateToPlayNotification = @"MandoGameStateDidUpdateToPlay";
+NSString* const MandoGameStateDidUpdateToPauseNotification = @"MandoGameStateDidUpdateToPause";
+
 @interface MandoToolbar ()
 @property (nonatomic, assign, getter=isIdleState) BOOL idleState;
 @end
@@ -20,6 +24,9 @@
     self.stopButton.enabled = YES;
     self.resumeButton.enabled = YES;
     self.idleState = NO;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:MandoGameStateDidUpdateToPlayNotification
+                                                        object:self];
 }
 
 
@@ -30,6 +37,9 @@
     self.stopButton.enabled = YES;
     self.resumeButton.enabled = YES;
     self.idleState = NO;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:MandoGameStateDidUpdateToPauseNotification
+                                                        object:self];
 }
 
 
@@ -40,6 +50,9 @@
     self.stopButton.enabled = NO;
     self.resumeButton.enabled = YES;
     self.idleState = YES;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:MandoGameStateDidUpdateToIdleNotification
+                                                        object:self];
 }
 
 @end

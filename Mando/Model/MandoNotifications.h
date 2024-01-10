@@ -10,4 +10,8 @@
 
 extern NSString* const MandoUserSettingsDidChangeNotification;
 
+extern NSString* const MandoGameStateDidUpdateToIdleNotification;
+extern NSString* const MandoGameStateDidUpdateToPlayNotification;
+extern NSString* const MandoGameStateDidUpdateToPauseNotification;
+
 #endif /* MandoNotifications_h */
