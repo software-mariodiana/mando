@@ -12,9 +12,10 @@
 #import "MandoNotifications.h"
 #import "MandoSettingsStore.h"
 
-#define SPEED_INCREASE 0.0175
+#define SPEED_INCREASE 0.9583
 #define MIN_INTERVAL 0.25
 
+#define PauseForRoundInterval() [NSThread sleepForTimeInterval:0.6]
 #define PauseForInterval() [NSThread sleepForTimeInterval:[self playRateInterval]]
 
 @interface MandoErrorTone : NSObject
@@ -94,7 +95,7 @@
     
     if ([self isAcceleratingEachRound]) {
         // Round 2 will then be at the user's desired starting speed.
-        self.playRateInterval = self.playRateInterval + SPEED_INCREASE;
+        self.playRateInterval = self.playRateInterval / SPEED_INCREASE;
     }
 }
 
@@ -102,10 +103,8 @@
 - (void)updatePlayRateInterval
 {
     if ([self isAcceleratingEachRound] && [self playRateInterval] > MIN_INTERVAL) {
-        self.playRateInterval = self.playRateInterval - SPEED_INCREASE;
+        self.playRateInterval = self.playRateInterval * SPEED_INCREASE;
     }
-    
-    NSLog(@"## Play rate interval: %.2f", [self playRateInterval]);
 }
 
 
@@ -133,6 +132,7 @@
         self.game = [[MandoGame alloc] initWithMidiTones:[self tones]];
     }
     
+    NSLog(@"## Play rate interval: %.2f", [self playRateInterval]);
     NSLog(@"## Notes per round: %ld", [self notesPerRound]);
     id<MandoRound> round = [self currentRound];
     
