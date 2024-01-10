@@ -73,7 +73,11 @@
 - (void)play:(id)sender
 {
     NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
-    NSTimeInterval rate = [[MandoSettingsStore sharedStore] playRate];
+    NSTimeInterval rate = [[self game] playRate];
+    
+    // For now we need backwards compatibility for testers.
+    rate = !(rate) ? [[MandoSettingsStore sharedStore] playRate] : rate;
+    NSLog(@"## Playback rate: %.2f", rate);
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         for (id<MandoMidiPlaying> tone in [[self game] toneSequence]) {

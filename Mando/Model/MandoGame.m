@@ -11,6 +11,7 @@
 @interface MandoRound : NSObject <MandoRound>
 @property (nonatomic, strong) NSArray* toneSequence;
 @property (nonatomic, assign) NSInteger roundNumber;
+@property (nonatomic, assign) NSTimeInterval playRate;
 @end
 
 @implementation MandoRound
@@ -39,7 +40,7 @@
 }
 
 
-- (id<MandoRound>)nextRoundWithNoteCount:(NSInteger)noteCount
+- (id<MandoRound>)nextRoundWithNoteCount:(NSInteger)noteCount playRate:(NSTimeInterval)interval
 {
     MandoRound* round = [[MandoRound alloc] init];
     
@@ -52,6 +53,7 @@
     self.roundNumber += 1;
     round.toneSequence = [NSArray arrayWithArray:[self sequence]];
     round.roundNumber = self.roundNumber;
+    round.playRate = interval;
     
     return round;
 }

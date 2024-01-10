@@ -12,6 +12,6 @@
 
 - (instancetype)initWithMidiTones:(NSArray *)tones;
 
-- (id<MandoRound>)nextRoundWithNoteCount:(NSInteger)noteCount;
+- (id<MandoRound>)nextRoundWithNoteCount:(NSInteger)noteCount playRate:(NSTimeInterval)interval;
 
 @end

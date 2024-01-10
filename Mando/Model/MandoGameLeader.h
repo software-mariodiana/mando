@@ -12,4 +12,5 @@
 - (NSString *)score;
 - (NSString *)dateString;
 - (NSArray *)toneSequence;
+- (NSTimeInterval)playRate;
 @end

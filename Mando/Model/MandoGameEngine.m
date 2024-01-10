@@ -133,11 +133,11 @@
     }
     
     NSLog(@"## Play rate interval: %.2f", [self playRateInterval]);
-    NSLog(@"## Notes per round: %ld", [self notesPerRound]);
+    NSLog(@"## Notes added per round: %ld", [self notesPerRound]);
     id<MandoRound> round = [self currentRound];
     
     if (![self isReset]) {
-        round = [[self game] nextRoundWithNoteCount:[self notesPerRound]];
+        round = [[self game] nextRoundWithNoteCount:[self notesPerRound] playRate:[self playRateInterval]];
         self.currentRound = round;
     }
     

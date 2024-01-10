@@ -10,4 +10,5 @@
 @protocol MandoRound <NSObject>
 - (NSInteger)roundNumber;
 - (NSArray *)toneSequence;
+- (NSTimeInterval)playRate;
 @end

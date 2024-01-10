@@ -10,6 +10,7 @@
 @interface MandoGameRecord ()
 @property (nonatomic, assign) NSInteger roundNumber;
 @property (nonatomic, strong) NSArray* toneSequence;
+@property (nonatomic, assign) NSTimeInterval playRate;
 @end
 
 @implementation MandoGameRecord
@@ -23,6 +24,7 @@
         
         NSRange range = NSMakeRange(0, [[round toneSequence] count] - 1);
         _toneSequence = [[round toneSequence] subarrayWithRange:range];
+        _playRate = round.playRate;
     }
     
     return self;

@@ -37,6 +37,7 @@ NSString* const MandoLeaderboardLastGamePlayedKey = @"MandoLeaderboardLastGamePl
 @property (nonatomic, copy) NSString* score;
 @property (nonatomic, strong) NSDate* date;
 @property (nonatomic, strong) NSArray* toneSequence;
+@property (nonatomic, assign) NSTimeInterval playRate;
 
 + (NSISO8601DateFormatter *)ISO8601DateFormatter;
 + (NSDateFormatter *)dateFormatter;
@@ -113,6 +114,7 @@ NSString* const MandoLeaderboardLastGamePlayedKey = @"MandoLeaderboardLastGamePl
         });
         
         _toneSequence = [NSArray arrayWithArray:toneSequence];
+        _playRate = [record playRate];
     }
     
     return self;
