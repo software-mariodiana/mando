@@ -40,20 +40,38 @@ NSString* const MandoInfoViewTableCellIdentifier = @"MandoInfoViewTableCellIdent
     
     self.navigationItem.rightBarButtonItem = doneButton;
     
-    UITableView* tableView = [[UITableView alloc] init];
+    UIView* subview = nil;
     
-    tableView.dataSource = self;
-    tableView.delegate = self;
+    if ([self lastGamePlayed] != nil) {
+        UITableView* tableView = [[UITableView alloc] init];
+        
+        tableView.dataSource = self;
+        tableView.delegate = self;
+        
+        self.tableView = tableView;
+        subview = tableView;
+    }
+    else {
+        subview = [[UIView alloc] init];
+        subview.backgroundColor = UIColor.whiteColor;
+        
+        UILabel* label = [[UILabel alloc] init];
+        label.text = @"No past games";
+        
+        label.translatesAutoresizingMaskIntoConstraints = NO;
+        [subview addSubview:label];
+        
+        [[label centerXAnchor] constraintEqualToAnchor:[subview centerXAnchor]].active = YES;
+        [[label centerYAnchor] constraintEqualToAnchor:[subview centerYAnchor]].active = YES;
+    }
     
-    tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    [[self view] addSubview:tableView];
+    subview.translatesAutoresizingMaskIntoConstraints = NO;
+    [[self view] addSubview:subview];
     
-    [[tableView topAnchor] constraintEqualToAnchor:[[self view] topAnchor]].active = YES;
-    [[tableView bottomAnchor] constraintEqualToAnchor:[[self view] bottomAnchor]].active = YES;
-    [[tableView leadingAnchor] constraintEqualToAnchor:[[self view] leadingAnchor]].active = YES;
-    [[tableView trailingAnchor] constraintEqualToAnchor:[[self view] trailingAnchor]].active = YES;
-    
-    self.tableView = tableView;
+    [[subview topAnchor] constraintEqualToAnchor:[[self view] topAnchor]].active = YES;
+    [[subview bottomAnchor] constraintEqualToAnchor:[[self view] bottomAnchor]].active = YES;
+    [[subview leadingAnchor] constraintEqualToAnchor:[[self view] leadingAnchor]].active = YES;
+    [[subview trailingAnchor] constraintEqualToAnchor:[[self view] trailingAnchor]].active = YES;
     
     [[self view] setNeedsUpdateConstraints];
 }
