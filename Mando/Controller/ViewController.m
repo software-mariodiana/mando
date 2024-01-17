@@ -22,7 +22,7 @@
 #import "MandoGameRecord.h"
 #import "MandoCallObserver.h"
 
-const NSInteger kConfettiThreshold = 1;
+const NSInteger kConfettiThreshold = 10;
 
 @interface ViewController () <MandoButtonsViewDelegate, MandoGameEngineDelegate, MandoCallObserverDelegate>
 @property (nonatomic, weak) MDXSimpleConfettiLayer* confetti;
