@@ -37,6 +37,7 @@
 		ACBC684E263B93170057054F /* MDXCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBC684C263B93170057054F /* MDXCircleView.m */; };
 		ACBF33952644DC9900708656 /* MDXPausableTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF33942644DC9900708656 /* MDXPausableTimer.m */; };
 		ACBF33982644E23500708656 /* MandoPauseScrimView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF33972644E23500708656 /* MandoPauseScrimView.m */; };
+		ACD185D32B584472006D28A1 /* MDXSimpleConfettiLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD185D12B584472006D28A1 /* MDXSimpleConfettiLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,8 @@
 		ACBF33942644DC9900708656 /* MDXPausableTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDXPausableTimer.m; sourceTree = "<group>"; };
 		ACBF33962644E23500708656 /* MandoPauseScrimView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandoPauseScrimView.h; sourceTree = "<group>"; };
 		ACBF33972644E23500708656 /* MandoPauseScrimView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandoPauseScrimView.m; sourceTree = "<group>"; };
+		ACD185D12B584472006D28A1 /* MDXSimpleConfettiLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDXSimpleConfettiLayer.m; sourceTree = "<group>"; };
+		ACD185D22B584472006D28A1 /* MDXSimpleConfettiLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDXSimpleConfettiLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 		AC79DE952B489A1D00F20F0C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ACD185D22B584472006D28A1 /* MDXSimpleConfettiLayer.h */,
+				ACD185D12B584472006D28A1 /* MDXSimpleConfettiLayer.m */,
 				ACBC684D263B93170057054F /* MDXCircleView.h */,
 				ACBC684C263B93170057054F /* MDXCircleView.m */,
 				AC263106263783F100889B63 /* MDXGlowButton.h */,
@@ -346,6 +351,7 @@
 				AC79F88D266524D4009A41CE /* MandoButtonsViewController.m in Sources */,
 				AC132683267E730C00ACE2C3 /* MandoCallObserver.m in Sources */,
 				ACBF33982644E23500708656 /* MandoPauseScrimView.m in Sources */,
+				ACD185D32B584472006D28A1 /* MDXSimpleConfettiLayer.m in Sources */,
 				ACAF42E2266D93EA00B7EBF3 /* MandoPlaybackViewController.m in Sources */,
 				AC2630F2263782A000889B63 /* ViewController.m in Sources */,
 				AC2630EC263782A000889B63 /* AppDelegate.m in Sources */,
