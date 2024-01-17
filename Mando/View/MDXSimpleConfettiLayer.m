@@ -17,6 +17,7 @@ const CGFloat yOffset = -100.0;
 @property (nonatomic, weak) CAEmitterLayer* confetti;
 @property (nonatomic, strong) CABasicAnimation* showAnimation;
 @property (nonatomic, strong) CABasicAnimation* hideAnimation;
+@property (nonatomic, copy) void (^completionBlock)(void);
 @end
 
 @implementation MDXSimpleConfettiLayer
@@ -67,8 +68,8 @@ const CGFloat yOffset = -100.0;
 
 - (void)show:(void (^)(void))showBlock
 {
+    self.completionBlock = showBlock;
     [self show];
-    showBlock();
 }
 
 - (void)hide
@@ -79,8 +80,8 @@ const CGFloat yOffset = -100.0;
 
 - (void)hide:(void (^)(void))hideBlock
 {
+    self.completionBlock = hideBlock;
     [self hide];
-    hideBlock();
 }
 
 - (void)setFrame:(CGRect)frame
@@ -92,6 +93,12 @@ const CGFloat yOffset = -100.0;
 - (void)animationDidStop:(CAAnimation *)animation finished:(BOOL)flag
 {
     self.opacity = (self.opacity == 1.0) ? 0.0 : 1.0;
+    
+    if ([self completionBlock]) {
+        self.completionBlock();
+    }
+    
+    self.completionBlock = nil;
 }
 
 - (CGPoint)calculatePositionFromFrame:(CGRect)frame

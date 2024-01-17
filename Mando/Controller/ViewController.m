@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 
+#import "MDXSimpleConfettiLayer.h"
 #import "MandoButtonsViewController.h"
 #import "MandoPauseScrimView.h"
 #import "MDXGlowButton+MidiNote.h"
@@ -21,7 +22,10 @@
 #import "MandoGameRecord.h"
 #import "MandoCallObserver.h"
 
+const NSInteger kConfettiThreshold = 1;
+
 @interface ViewController () <MandoButtonsViewDelegate, MandoGameEngineDelegate, MandoCallObserverDelegate>
+@property (nonatomic, weak) MDXSimpleConfettiLayer* confetti;
 @property (nonatomic, weak) UIView* buttonsContainerView;
 @property (nonatomic, strong) MandoButtonsViewController* buttonsViewController;
 @property (nonatomic, strong) NSDictionary* userSettings;
@@ -79,6 +83,11 @@
     self.buttonsContainerView = buttonsContainerView;
     
     [self setupButtonsViewController];
+    
+    MDXSimpleConfettiLayer* confetti = [[MDXSimpleConfettiLayer alloc] init];
+    confetti.frame = [[[self view] layer] bounds];
+    [[[self view] layer] addSublayer:confetti];
+    self.confetti = confetti;
     
     [[self view] setNeedsUpdateConstraints];
     
@@ -497,13 +506,26 @@ didCompleteResponseForRound:(id<MandoRound>)round
                                                      handler:^(UIAlertAction* action) {
             [[self toolbar] updateButtonsStateToIdle];
             [self updateResumeButtonWithSelector:@selector(startNewGame:)];
+            
+            if ([record roundNumber] > kConfettiThreshold) {
+                [[self confetti] hide];
+            }
         }];
         
         [alert addAction:okay];
         
-        [self presentViewController:alert animated:YES completion:^{
-            [[MandoLeaderboardStore sharedStore] addGameRecord:record];
-        }];
+        if ([record roundNumber] > kConfettiThreshold) {
+            [[self confetti] show:^{
+                [self presentViewController:alert animated:YES completion:^{
+                    [[MandoLeaderboardStore sharedStore] addGameRecord:record];
+                }];
+            }];
+        }
+        else {
+            [self presentViewController:alert animated:YES completion:^{
+                [[MandoLeaderboardStore sharedStore] addGameRecord:record];
+            }];
+        }
     }
 }
 
