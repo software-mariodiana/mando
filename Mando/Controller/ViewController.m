@@ -46,7 +46,7 @@ const NSInteger kConfettiThreshold = 10;
 {
     UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
     UIView *view = [[UIView alloc] initWithFrame:[mainWindow bounds]];
-    [view setBackgroundColor:[UIColor whiteColor]];
+    [view setBackgroundColor:[UIColor systemBackgroundColor]];
     self.view = view;
 }
 
