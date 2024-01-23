@@ -47,6 +47,41 @@ float playRates[] = { 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5, 0.45, 0.4 };
 }
 
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self updateSwitchOnTintColor];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillEnterForeground:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIApplicationWillEnterForegroundNotification
+                                                  object:nil];
+}
+
+
+- (void)applicationWillEnterForeground:(NSNotification *)notification
+{
+    [self updateSwitchOnTintColor];
+}
+
+
+- (void)updateSwitchOnTintColor
+{
+    UIWindow* window = [[[UIApplication sharedApplication] delegate] window];
+    BOOL isLightMode = [[window traitCollection] userInterfaceStyle] == UIUserInterfaceStyleLight;
+    UIColor* tint = isLightMode ? [[self view] tintColor] : UIColor.systemGrayColor;
+    [[self speedUpSwitch] setOnTintColor:tint];
+}
+
+
 - (void)setupToolbar
 {
     UILabel* label = [[UILabel alloc] init];
