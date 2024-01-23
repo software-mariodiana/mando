@@ -55,4 +55,50 @@ NSString* const MandoGameStateDidUpdateToPauseNotification = @"MandoGameStateDid
                                                         object:self];
 }
 
+
+- (void)setupResumeButtonAnimation
+{
+    // This should be done from within a -viewDidLoad: to take effect.
+    if (@available(iOS 17.0, *)) {
+        [[self resumeButton] addSymbolEffect:[NSSymbolPulseEffect effect]
+                                     options:[NSSymbolEffectOptions optionsWithRepeating]
+                                    animated:YES];
+        
+        NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+        [nc addObserver:self
+               selector:@selector(startAnimatingResumeButton:)
+                   name:MandoGameStateDidUpdateToIdleNotification
+                 object:nil];
+        
+        [nc addObserver:self
+               selector:@selector(startAnimatingResumeButton:)
+                   name:MandoGameStateDidUpdateToPauseNotification
+                 object:nil];
+        
+        [nc addObserver:self
+               selector:@selector(stopAnimatingResumeButton:)
+                   name:MandoGameStateDidUpdateToPlayNotification
+                 object:nil];
+    }
+}
+
+
+- (void)startAnimatingResumeButton:(NSNotification *)notification
+{
+    if (@available(iOS 17.0, *)) {
+        NSSymbolEffect* pulse = [NSSymbolPulseEffect effect];
+        [[self resumeButton] addSymbolEffect:pulse
+                                              options:[NSSymbolEffectOptions options]
+                                             animated:YES];
+    }
+}
+
+
+- (void)stopAnimatingResumeButton:(NSNotification *)notification
+{
+    if (@available(iOS 17.0, *)) {
+        [[self resumeButton] removeAllSymbolEffects];
+    }
+}
+
 @end

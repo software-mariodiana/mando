@@ -36,8 +36,6 @@ const NSInteger kConfettiThreshold = 10;
 @property (nonatomic, assign, getter=isResponseRoundActive) BOOL responseRoundActive;
 @property (nonatomic, strong) MandoCallObserver* callObserver;
 @property (nonatomic, strong) UIAlertController* interruptionAlert;
-@property (nonatomic, weak) UIImageView* resumeButtonImageView;
-@property (nonatomic, weak) UIGestureRecognizer* resumeButtonImageViewGesturerRecognizer;
 @end
 
 @implementation ViewController
@@ -105,6 +103,13 @@ const NSInteger kConfettiThreshold = 10;
 }
 
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [[self toolbar] setupResumeButtonAnimation];
+}
+
+
 - (BOOL)prefersStatusBarHidden
 {
     return [self isIpad];
@@ -132,64 +137,6 @@ const NSInteger kConfettiThreshold = 10;
     [[self buttonsViewController] didMoveToParentViewController:self];
     
     [[self buttonsViewController] setDelegate:self];
-}
-
-
-- (UIBarButtonItem *)createResumeButton
-{
-    UIBarButtonItem* resumeButton = nil;
-    
-    if (@available(iOS 17.0, *)) {
-        // UIImageView allows us a cool pulsating effect on the button to draw the user's attention.
-        UIImage* buttonImage =
-            [UIImage systemImageNamed:@"playpause"
-                    withConfiguration:[UIImageSymbolConfiguration
-                                       configurationWithScale:UIImageSymbolScaleLarge ]];
-        
-        UIImageView* imageView = [[UIImageView alloc] initWithImage:buttonImage];
-        
-        [imageView addSymbolEffect:[NSSymbolPulseEffect effect]
-                           options:[NSSymbolEffectOptions optionsWithRepeating]
-                          animated:YES];
-        
-        UIGestureRecognizer* buttonTap =
-            [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                    action:@selector(startNewGame:)];
-        
-        [imageView addGestureRecognizer:buttonTap];
-        
-        resumeButton = [[UIBarButtonItem alloc] initWithCustomView:imageView];
-        
-        // We want to turn the animation off when a game is playing, and then back on. So, we'll
-        // save these as instance variables to access them from the applicable methods.
-        self.resumeButtonImageView = imageView;
-        self.resumeButtonImageViewGesturerRecognizer = buttonTap;
-        
-        NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
-        [nc addObserver:self
-               selector:@selector(startAnimatingResumeButton)
-                   name:MandoGameStateDidUpdateToIdleNotification
-                 object:nil];
-        
-        [nc addObserver:self
-               selector:@selector(startAnimatingResumeButton)
-                   name:MandoGameStateDidUpdateToPauseNotification
-                 object:nil];
-        
-        [nc addObserver:self
-               selector:@selector(stopAnimatingResumeButton)
-                   name:MandoGameStateDidUpdateToPlayNotification
-                 object:nil];
-    } else {
-        // Fallback on earlier versions.
-        resumeButton =
-            [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"playpause"]
-                                             style:UIBarButtonItemStylePlain
-                                            target:self
-                                            action:@selector(startNewGame:)];
-    }
-    
-    return resumeButton;
 }
 
 
@@ -222,7 +169,11 @@ const NSInteger kConfettiThreshold = 10;
                                         target:self
                                         action:@selector(stop:)];
     
-    UIBarButtonItem* resumeButton = [self createResumeButton];
+    UIBarButtonItem* resumeButton = resumeButton =
+        [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"playpause"]
+                                         style:UIBarButtonItemStylePlain
+                                        target:self
+                                        action:@selector(startNewGame:)];
     
     [toolbar setItems:@[settingsButton, infoButton, spacer, stopButton, resumeButton]];
     
@@ -291,39 +242,9 @@ const NSInteger kConfettiThreshold = 10;
 
 #pragma mark - Game play
 
-- (void)startAnimatingResumeButton
-{
-    if (@available(iOS 17.0, *)) {
-        NSSymbolEffect* pulse = [NSSymbolPulseEffect effect];
-        [[self resumeButtonImageView] addSymbolEffect:pulse
-                                              options:[NSSymbolEffectOptions options]
-                                             animated:YES];
-    }
-}
-
-
-- (void)stopAnimatingResumeButton
-{
-    if (@available(iOS 17.0, *)) {
-        [[self resumeButtonImageView] removeAllSymbolEffects];
-    }
-}
-
-
 - (void)updateResumeButtonWithSelector:(SEL)selector
 {
-    if (@available(iOS 17.0, *)) {
-        [[self resumeButtonImageView] removeGestureRecognizer:[self resumeButtonImageViewGesturerRecognizer]];
-        
-        UIGestureRecognizer* buttonTap =
-            [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                    action:selector];
-        
-        [[self resumeButtonImageView] addGestureRecognizer:buttonTap];
-    }
-    else {
-        self.toolbar.resumeButton.action = selector;
-    }
+    self.toolbar.resumeButton.action = selector;
 }
 
 

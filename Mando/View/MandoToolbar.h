@@ -17,6 +17,7 @@
 - (void)updateButtonsStateToPlay;
 - (void)updateButtonsStateToPause;
 - (void)updateButtonsStateToIdle;
+- (void)setupResumeButtonAnimation;
 
 - (BOOL)isIdleState;
 
