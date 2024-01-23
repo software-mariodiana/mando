@@ -59,6 +59,15 @@
     self.exitState = YES;
 }
 
+- (void)navigationController:(UINavigationController *)navigationController
+      willShowViewController:(UIViewController *)viewController
+                    animated:(BOOL)animated
+{
+    // As the detail view controller we show the toolbar; the master view controller does not.
+    BOOL hidden = [viewController respondsToSelector:@selector(createButtonsTable)] ? NO : YES;
+    [navigationController setToolbarHidden:hidden];
+}
+
 - (NSDictionary *)createButtonsTable
 {
     NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);

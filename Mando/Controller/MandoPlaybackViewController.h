@@ -11,7 +11,7 @@
 #import "MDXSynth.h"
 
 
-@interface MandoPlaybackViewController : UIViewController
+@interface MandoPlaybackViewController : UIViewController <UINavigationControllerDelegate>
 
 @property (nonatomic, strong) id<MandoGameLeader> game;
 @property (nonatomic, weak) MDXSynth* synth;

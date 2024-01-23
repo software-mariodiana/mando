@@ -25,11 +25,10 @@ NSString* const MandoInfoViewTableCellIdentifier = @"MandoInfoViewTableCellIdent
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Leaderboard";
-    
-    UIColor* background = UIColor.whiteColor;
+    UIColor* background = UIColor.systemBackgroundColor;
     
     UINavigationController* nc = [self navigationController];
-    nc.toolbarHidden = NO;
+    nc.toolbarHidden = YES;
     nc.navigationBar.backgroundColor = background;
     nc.toolbar.backgroundColor = background;
     
@@ -189,6 +188,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     playback.game = leader;
     playback.synth = [self synth];
     
+    [[self navigationController] setDelegate:playback];
     [[self navigationController] pushViewController:playback animated:YES];
 }
 
