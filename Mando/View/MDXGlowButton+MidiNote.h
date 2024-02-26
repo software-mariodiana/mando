@@ -10,6 +10,7 @@
 
 @interface MDXGlowButton (MidiNote) <MandoMidiPlaying>
 - (int)midiNote;
+- (void)flash;
 @end
 
 

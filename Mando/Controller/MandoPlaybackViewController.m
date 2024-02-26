@@ -88,13 +88,15 @@
     rate = !(rate) ? [[MandoSettingsStore sharedStore] playRate] : rate;
     NSLog(@"## Playback rate: %.2f", rate);
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_queue_t tonePlaybackQueue =
+        dispatch_queue_create("com.mariodiana.mando.tonePlaybackQueue", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_async(tonePlaybackQueue, ^{
         for (id<MandoMidiPlaying> tone in [[self game] toneSequence]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 MDXGlowButton* button = [self buttonForTone:tone];
-                [button showHighlightColor];
+                [button flash];
                 [[self synth] playNote:[button midiNote]];
-                [button performSelector:@selector(hideHighlightColor) withObject:nil afterDelay:0.2];
             });
             
             [NSThread sleepForTimeInterval:rate];

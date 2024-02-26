@@ -368,10 +368,8 @@ const NSInteger kConfettiThreshold = 10;
 {
     NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
     NSLog(@"##     tone: %@", tone);
-    // We must delay the hide, or the whole thing happens faster than the eye can see.
-    [tone showHighlightColor];
+    [tone flash];
     [self play:tone];
-    [tone performSelector:@selector(hideHighlightColor) withObject:nil afterDelay:0.2];
 }
 
 

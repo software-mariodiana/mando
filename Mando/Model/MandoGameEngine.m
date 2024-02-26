@@ -144,7 +144,7 @@
     [[self delegate] gameEngine:self willBeginCallForRoundNumber:[round roundNumber]];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        PauseForInterval();
+        PauseForRoundInterval();
         
         [self handleGamePause];
         BOOL terminated = NO;
