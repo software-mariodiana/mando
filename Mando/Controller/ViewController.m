@@ -231,10 +231,17 @@ const NSInteger kConfettiThreshold = 10;
 }
 
 
+- (BOOL)isShowingGameOverAlert
+{
+    UIViewController* viewController = [self presentedViewController];
+    return [viewController isKindOfClass:NSClassFromString(@"UIAlertController")];
+}
+
+
 - (void)applicationWillResignActive:(NSNotification *)notification
 {
-    // No reason to pause if we're idle.
-    if (![[self toolbar] isIdleState]) {
+    // No reason to pause if we're idle or showing the Game Over alert.
+    if (![[self toolbar] isIdleState] && ![self isShowingGameOverAlert]) {
         [self pause:self];
     }
 }
