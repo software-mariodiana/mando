@@ -16,40 +16,13 @@ const int MandoRedNote = 65;
 const int MandoOrangeNote = 69;
 const int MandoBlueNote = 72;
 
-
-@interface NSMutableArray (MandoQueue)
-- (void)enqueuePlayer:(AVPlayer *)player;
-- (AVPlayer *)dequeuePlayer;
-@end
-
-@implementation NSMutableArray (MandoQueue)
-
-- (void)enqueuePlayer:(AVPlayer *)player
-{
-    [self addObject:player];
-}
-
-- (AVPlayer *)dequeuePlayer
-{
-    if ([self count] > 0) {
-        AVPlayer* player = [self firstObject];
-        [self removeObjectAtIndex:0];
-        return player;
-    }
-    else {
-        return nil;
-    }
-}
-
-@end
-
 @interface MDXSynth ()
 @property (nonatomic, strong) AVAsset* errorNote;
 @property (nonatomic, strong) AVAsset* greenNote;
 @property (nonatomic, strong) AVAsset* redNote;
 @property (nonatomic, strong) AVAsset* orangeNote;
 @property (nonatomic, strong) AVAsset* blueNote;
-@property (nonatomic, strong) NSMutableArray* players;
+@property (nonatomic, strong) AVPlayer* player;
 @property (nonatomic, strong) MDXAudioController* audioController;
 @end
 
@@ -81,13 +54,7 @@ const int MandoBlueNote = 72;
         self.blueNote = [AVAsset assetWithURL:blue];
         self.errorNote = [AVAsset assetWithURL:error];
         
-        self.players = [NSMutableArray array];
-        
-        for (int i = 0; i < 4; i++) {
-            // Prime the player with an item so that the first note will play immediately.
-            AVPlayerItem* item = [AVPlayerItem playerItemWithAsset:[self blueNote]];
-            [[self players] enqueuePlayer:[[AVPlayer alloc] initWithPlayerItem:item]];
-        }
+        self.player = [[AVPlayer alloc] init];
         
         self.audioController = [[MDXAudioController alloc] init];
         [[self audioController] setUpAudioSession];
@@ -96,7 +63,6 @@ const int MandoBlueNote = 72;
 
 - (void)playNote:(int)midiNote
 {
-    AVPlayer* player = [[self players] dequeuePlayer];;
     AVPlayerItem* note = nil;
     
     switch (midiNote) {
@@ -117,10 +83,10 @@ const int MandoBlueNote = 72;
             break;
     }
     
-    [player replaceCurrentItemWithPlayerItem:note];
-    [player play];
-    
-    [[self players] enqueuePlayer:player];
+    [[note asset] loadValuesAsynchronouslyForKeys:@[@"duration"] completionHandler:^{
+        [[self player] replaceCurrentItemWithPlayerItem:note];
+        [[self player] play];
+    }];
 }
 
 @end
