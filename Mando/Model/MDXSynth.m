@@ -54,6 +54,13 @@ const int MandoBlueNote = 72;
         self.blueNote = [AVAsset assetWithURL:blue];
         self.errorNote = [AVAsset assetWithURL:error];
         
+        // Make sure the sound resources have been loaded into memory.
+        [[self greenNote] loadValuesAsynchronouslyForKeys:@[@"duration"] completionHandler:nil];
+        [[self redNote] loadValuesAsynchronouslyForKeys:@[@"duration"] completionHandler:nil];
+        [[self orangeNote] loadValuesAsynchronouslyForKeys:@[@"duration"] completionHandler:nil];
+        [[self blueNote] loadValuesAsynchronouslyForKeys:@[@"duration"] completionHandler:nil];
+        [[self errorNote] loadValuesAsynchronouslyForKeys:@[@"duration"] completionHandler:nil];
+        
         self.player = [[AVPlayer alloc] init];
         
         self.audioController = [[MDXAudioController alloc] init];
