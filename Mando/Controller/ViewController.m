@@ -411,6 +411,11 @@ didCompleteResponseForRound:(id<MandoRound>)round
     NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
     NSLog(@"##     round: %ld", [round roundNumber]);
     NSLog(@"##   success: %@", (success) ? @"YES" : @"NO");
+    
+    // Some players (like my nephew) tap along for the sake of muscle memory, and if they 
+    // jump the gun and the button responds, it can get confusing.
+    [[self buttonsViewController] setButtonsInteractionEnabled:NO];
+    
     self.responseRoundActive = NO;
     
     if (success) {
