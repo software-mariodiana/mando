@@ -38,7 +38,7 @@ This project is licensed under the BSD-3-Clause - see the [LICENSE.md](LICENSE.m
 
 ## Authors
 
-* **[Mario Diana](https://github.com/yourusername)** - *Initial work*
+* **[Mario Diana](https://github.com/software-mariodiana)** - *Initial work*
 
 ## Contact
 
